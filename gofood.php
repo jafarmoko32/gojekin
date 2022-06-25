@@ -1,16 +1,16 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("blue","__________GOJEK AUTOCLAIM BY JEKLIN V1.0__________ \n");
-echo color("blue","[+]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
-echo color("blue","[+]  Recode  By: GG GOFOOD\n");
-echo color("blue","[+]  Masukin OTP pake 62xxxxxxxxx ya subes \n");
-echo color("blue","____________________________________________________\n");
+echo color("red","__________GOJEK AUTOCLAIM BY JEKLIN V1.0__________ \n");
+echo color("red","[+]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
+echo color("red","[+]  Recode  By: GG GOFOOD\n");
+echo color("red","[+]  Masukin OTP pake 62xxxxxxxxx ya subes \n");
+echo color("red","____________________________________________________\n");
 function change(){
         $nama = "mass ex";
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
-        echo color("nevy","(+) Masukin OTP : ");
+        echo color("orange","(+) Masukin OTP : ");
         $no = trim(fgets(STDIN));
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$no.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
